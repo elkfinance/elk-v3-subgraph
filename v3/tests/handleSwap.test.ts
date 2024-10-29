@@ -205,7 +205,7 @@ describe('handleSwap', () => {
     const dayId = MOCK_EVENT.block.timestamp.toI32() / 86400
     const hourId = MOCK_EVENT.block.timestamp.toI32() / 3600
 
-    assertObjectMatches('UniswapDayData', dayId.toString(), [
+    assertObjectMatches('ElkDayData', dayId.toString(), [
       ['volumeETH', amountTotalETHTRacked.toString()],
       ['volumeUSD', amountTotalUSDTracked.toString()],
       ['feesUSD', feesUSD.toString()],

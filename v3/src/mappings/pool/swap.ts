@@ -10,7 +10,7 @@ import {
   updatePoolHourData,
   updateTokenDayData,
   updateTokenHourData,
-  updateUniswapDayData,
+  updateElkDayData,
 } from '../../utils/intervalUpdates'
 import {
   findNativePerToken,
@@ -176,7 +176,7 @@ export function handleSwapHelper(event: SwapEvent, subgraphConfig: SubgraphConfi
     swap.logIndex = event.logIndex
 
     // interval data
-    const uniswapDayData = updateUniswapDayData(event, factoryAddress)
+    const elkDayData = updateElkDayData(event, factoryAddress)
     const poolDayData = updatePoolDayData(event)
     const poolHourData = updatePoolHourData(event)
     const token0DayData = updateTokenDayData(token0 as Token, event)
@@ -185,9 +185,9 @@ export function handleSwapHelper(event: SwapEvent, subgraphConfig: SubgraphConfi
     const token1HourData = updateTokenHourData(token1 as Token, event)
 
     // update volume metrics
-    uniswapDayData.volumeETH = uniswapDayData.volumeETH.plus(amountTotalETHTracked)
-    uniswapDayData.volumeUSD = uniswapDayData.volumeUSD.plus(amountTotalUSDTracked)
-    uniswapDayData.feesUSD = uniswapDayData.feesUSD.plus(feesUSD)
+    elkDayData.volumeETH = elkDayData.volumeETH.plus(amountTotalETHTracked)
+    elkDayData.volumeUSD = elkDayData.volumeUSD.plus(amountTotalUSDTracked)
+    elkDayData.feesUSD = elkDayData.feesUSD.plus(feesUSD)
 
     poolDayData.volumeUSD = poolDayData.volumeUSD.plus(amountTotalUSDTracked)
     poolDayData.volumeToken0 = poolDayData.volumeToken0.plus(amount0Abs)
@@ -222,7 +222,7 @@ export function handleSwapHelper(event: SwapEvent, subgraphConfig: SubgraphConfi
     swap.save()
     token0DayData.save()
     token1DayData.save()
-    uniswapDayData.save()
+    elkDayData.save()
     poolDayData.save()
     poolHourData.save()
     token0HourData.save()

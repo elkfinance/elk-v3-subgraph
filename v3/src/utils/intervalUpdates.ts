@@ -9,7 +9,7 @@ import {
   Token,
   TokenDayData,
   TokenHourData,
-  UniswapDayData,
+  ElkDayData,
 } from './../types/schema'
 import { ONE_BI, ZERO_BD, ZERO_BI } from './constants'
 
@@ -17,24 +17,24 @@ import { ONE_BI, ZERO_BD, ZERO_BI } from './constants'
  * Tracks global aggregate data over daily windows
  * @param event
  */
-export function updateUniswapDayData(event: ethereum.Event, factoryAddress: string): UniswapDayData {
-  const uniswap = Factory.load(factoryAddress)!
+export function updateElkDayData(event: ethereum.Event, factoryAddress: string): ElkDayData {
+  const elk = Factory.load(factoryAddress)!
   const timestamp = event.block.timestamp.toI32()
   const dayID = timestamp / 86400 // rounded
   const dayStartTimestamp = dayID * 86400
-  let uniswapDayData = UniswapDayData.load(dayID.toString())
-  if (uniswapDayData === null) {
-    uniswapDayData = new UniswapDayData(dayID.toString())
-    uniswapDayData.date = dayStartTimestamp
-    uniswapDayData.volumeETH = ZERO_BD
-    uniswapDayData.volumeUSD = ZERO_BD
-    uniswapDayData.volumeUSDUntracked = ZERO_BD
-    uniswapDayData.feesUSD = ZERO_BD
+  let elkDayData = ElkDayData.load(dayID.toString())
+  if (elkDayData === null) {
+    elkDayData = new ElkDayData(dayID.toString())
+    elkDayData.date = dayStartTimestamp
+    elkDayData.volumeETH = ZERO_BD
+    elkDayData.volumeUSD = ZERO_BD
+    elkDayData.volumeUSDUntracked = ZERO_BD
+    elkDayData.feesUSD = ZERO_BD
   }
-  uniswapDayData.tvlUSD = uniswap.totalValueLockedUSD
-  uniswapDayData.txCount = uniswap.txCount
-  uniswapDayData.save()
-  return uniswapDayData as UniswapDayData
+  elkDayData.tvlUSD = elk.totalValueLockedUSD
+  elkDayData.txCount = elk.txCount
+  elkDayData.save()
+  return elkDayData as ElkDayData
 }
 
 export function updatePoolDayData(event: ethereum.Event): PoolDayData {

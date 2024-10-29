@@ -10,7 +10,7 @@ import {
   updatePoolHourData,
   updateTokenDayData,
   updateTokenHourData,
-  updateUniswapDayData,
+  updateElkDayData,
 } from '../../utils/intervalUpdates'
 import { createTick } from '../../utils/tick'
 
@@ -125,7 +125,7 @@ export function handleMintHelper(event: MintEvent, subgraphConfig: SubgraphConfi
     // TODO: Update Tick's volume, fees, and liquidity provider count. Computing these on the tick
     // level requires reimplementing some of the swapping code from v3-core.
 
-    updateUniswapDayData(event, factoryAddress)
+    updateElkDayData(event, factoryAddress)
     updatePoolDayData(event)
     updatePoolHourData(event)
     updateTokenDayData(token0 as Token, event)

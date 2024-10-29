@@ -10,7 +10,7 @@ import {
   updatePoolHourData,
   updateTokenDayData,
   updateTokenHourData,
-  updateUniswapDayData,
+  updateElkDayData,
 } from '../../utils/intervalUpdates'
 
 export function handleBurn(event: BurnEvent): void {
@@ -94,7 +94,7 @@ export function handleBurnHelper(event: BurnEvent, subgraphConfig: SubgraphConfi
       lowerTick.save()
       upperTick.save()
     }
-    updateUniswapDayData(event, factoryAddress)
+    updateElkDayData(event, factoryAddress)
     updatePoolDayData(event)
     updatePoolHourData(event)
     updateTokenDayData(token0 as Token, event)

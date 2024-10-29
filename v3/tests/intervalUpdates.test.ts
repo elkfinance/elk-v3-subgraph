@@ -8,7 +8,7 @@ import {
   updatePoolHourData,
   updateTokenDayData,
   updateTokenHourData,
-  updateUniswapDayData,
+  updateElkDayData,
 } from '../src/utils/intervalUpdates'
 import {
   assertObjectMatches,
@@ -23,7 +23,7 @@ import {
   WETH_MAINNET_FIXTURE,
 } from './constants'
 
-describe('uniswap interval data', () => {
+describe('elk interval data', () => {
   beforeEach(() => {
     clearStore()
 
@@ -44,36 +44,36 @@ describe('uniswap interval data', () => {
     factory.save()
   })
 
-  test('success - create and update uniswapDayData', () => {
-    // these are the only two fields that get persisted to uniswapDayData, set them to non-zero values
+  test('success - create and update elkDayData', () => {
+    // these are the only two fields that get persisted to elkDayData, set them to non-zero values
     const factory = Factory.load(TEST_CONFIG.factoryAddress)!
-    const uniswapTxCount = BigInt.fromString('10')
-    const uniswapTotalValueLockedUSD = BigDecimal.fromString('100')
-    factory.txCount = uniswapTxCount
-    factory.totalValueLockedUSD = uniswapTotalValueLockedUSD
+    const elkTxCount = BigInt.fromString('10')
+    const elkTotalValueLockedUSD = BigDecimal.fromString('100')
+    factory.txCount = elkTxCount
+    factory.totalValueLockedUSD = elkTotalValueLockedUSD
     factory.save()
 
-    updateUniswapDayData(poolEvent, TEST_CONFIG.factoryAddress)
+    updateElkDayData(poolEvent, TEST_CONFIG.factoryAddress)
     const dayId = poolEvent.block.timestamp.toI32() / 86400
     const dayStartTimestamp = dayId * 86400
 
-    assertObjectMatches('UniswapDayData', dayId.toString(), [
+    assertObjectMatches('ElkDayData', dayId.toString(), [
       ['date', dayStartTimestamp.toString()],
       ['volumeETH', '0'],
       ['volumeUSD', '0'],
       ['volumeUSDUntracked', '0'],
       ['feesUSD', '0'],
-      ['tvlUSD', uniswapTotalValueLockedUSD.toString()],
-      ['txCount', uniswapTxCount.toString()],
+      ['tvlUSD', elkTotalValueLockedUSD.toString()],
+      ['txCount', elkTxCount.toString()],
     ])
 
     const updatedTxCount = BigInt.fromString('20')
     factory.txCount = updatedTxCount
     factory.save()
 
-    updateUniswapDayData(poolEvent, TEST_CONFIG.factoryAddress)
+    updateElkDayData(poolEvent, TEST_CONFIG.factoryAddress)
 
-    assertObjectMatches('UniswapDayData', dayId.toString(), [['txCount', updatedTxCount.toString()]])
+    assertObjectMatches('ElkDayData', dayId.toString(), [['txCount', updatedTxCount.toString()]])
   })
 })
 

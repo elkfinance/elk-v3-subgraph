@@ -10,7 +10,7 @@ import {
   updatePoolHourData,
   updateTokenDayData,
   updateTokenHourData,
-  updateUniswapDayData,
+  updateElkDayData,
 } from '../../utils/intervalUpdates'
 import { getTrackedAmountUSD } from '../../utils/pricing'
 
@@ -92,7 +92,7 @@ export function handleCollectHelper(event: CollectEvent, subgraphConfig: Subgrap
   collect.tickUpper = BigInt.fromI32(event.params.tickUpper)
   collect.logIndex = event.logIndex
 
-  updateUniswapDayData(event, factoryAddress)
+  updateElkDayData(event, factoryAddress)
   updatePoolDayData(event)
   updatePoolHourData(event)
   updateTokenDayData(token0 as Token, event)

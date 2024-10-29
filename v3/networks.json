@@ -1,0 +1,68 @@
+{
+  "arbitrum-one": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 171589401
+    }
+  },
+  "avalanche": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 40507443      
+    }
+  },
+  "base": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 9384548
+    }
+  },
+  "blast-mainnet": {
+    "Factory": {
+      "address": "0x472557F719CCa449d7235C3db0eB8481e6383f74",
+      "startBlock": 5449944
+    }
+  },
+  "bsc": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 35342415
+    }
+  },
+  "celo": {
+    "Factory": {
+      "address": "0x0000000000000000000000000000000000000000",
+      "startBlock": 0
+    }
+  },
+  "mainnet": {
+    "Factory": {
+      "address": "0xE8234393E0Ffe32785BD78366be2FfFcE51795b9",
+      "startBlock": 18776630
+    }
+  },
+  "matic": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 52455141
+    }
+  },
+  "optimism": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 114978482
+    }
+  },
+  "zksync-era": {
+    "Factory": {
+      "address": "0x0000000000000000000000000000000000000000",
+      "startBlock": 0
+    }
+  },
+  "q": {
+    "Factory": {
+      "address": "0xC05A5aA56DF0Dc97D6B9849A06627a079790014f",
+      "startBlock": 11486703
+    }
+  }
+}
