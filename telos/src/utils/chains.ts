@@ -4,7 +4,7 @@ import { OPTIMISM_POOL_MAPPINGS } from '../backfill/poolMappings'
 import { StaticTokenDefinition } from './staticTokenDefinition'
 
 export enum ChainId {
-  MAINNET = replace_chainid,
+  MAINNET = 40,
 }
 
 // subgraph does not support string enums, hence these constants
@@ -60,16 +60,18 @@ export function getSubgraphConfig(): SubgraphConfig {
   // subgraph does not support case switch with strings, hence this if else block
   if (selectedNetwork == MAINNET_NETWORK_NAME) {
     return {
-      factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f_replace_factory',
-      stablecoinWrappedNativePoolAddress: 'replace_stableNativePool', // WETH-USDC 0.05% pool
-      stablecoinIsToken0: replace_boolean,
-      wrappedNativeAddress: 'replace_WETH', // WETH
+      factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f',
+      stablecoinWrappedNativePoolAddress: '0x3f13ba91be650ed78757aeaf7a69315f8f786646', // WETH-USDC 0.05% pool
+      stablecoinIsToken0: true,
+      wrappedNativeAddress: '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E', // WTLOS
       minimumNativeLocked: BigDecimal.fromString('0'),
       stablecoinAddresses: [
-        'replace_tokens', // stableaddresses
+        '0x8d97cea50351fb4329d591682b148d43a0c3611b', // USDC
       ],
       whitelistTokens: [
-        'replace_tokens', //tokens
+        '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // elk
+        '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // old_elk
+        '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk_legacy
       ],
       tokenOverrides: [
         // {
