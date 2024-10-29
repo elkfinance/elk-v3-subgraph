@@ -9,7 +9,7 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: replace_chainname
     source:
       address: "0xc05a5aa56df0dc97d6b9849a06627a079790014f"
       abi: Factory
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: replace_chainname
     source:
       abi: Pool
     mapping:

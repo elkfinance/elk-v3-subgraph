@@ -4,27 +4,43 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-export const WETH_ADDRESS = '0xd07178e3ecbc78de110df84fe1a979d5f349784a'
-export const USDC_WETH_03_POOL = '0xc493f1436b4129b57fb7d129ea4409b2200f69a8'
-export const STABLECOIN_IS_TOKEN0 = false
+export const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+export const USDC_WETH_03_POOL = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'
+export const STABLECOIN_IS_TOKEN0 = true
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0xd07178e3ecbc78de110df84fe1a979d5f349784a', // WQGOV
-  '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // elk
-  '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // old_elk
-  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk_legacy
-  '0xd56f9fff3fe3bd0c7b52aff9a42eb70e05a287cc', // weth
-  '0xe4fadbbf24f118b1e63d65f1aac2a825a07f7619', // vnxau
-  '0xde397e6c442a3e697367decbf0d50733dc916b79', // wbtc
+  '0x6b175474e89094c44da98b954eedeac495271d0f', // DAI
+  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
+  '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
+  '0x0000000000085d4780b73119b644ae5ecd22b376', // TUSD
+  '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599', // WBTC
+  '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643', // cDAI
+  '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
+  '0x86fadb80d8d2cff3c3680819e4da99c10232ba0f', // EBASE
+  '0x57ab1ec28d129707052df4df418d58a2d46d5f51', // sUSD
+  '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2', // MKR
+  '0xc00e94cb662c3520282e6f5717214004a7f26888', // COMP
+  '0x514910771af9ca656af840dff83e8264ecf986ca', // LINK
+  '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f', // SNX
+  '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', // YFI
+  '0x111111111117dc0aa78b770fa6a738034120c302', // 1INCH
+  '0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8', // yCurv
+  '0x956f47f50a910163d8bf957cf5846d573e7f87ca', // FEI
+  '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0', // MATIC
+  '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9', // AAVE
+  '0xfe2e637202056d30016725477c5da089ab0a043a', // sETH2
 ]
 
 export const STABLE_COINS: string[] = [
-  '0x79cb92a2806bf4f82b614a84b6805963b8b1d8bb', // USDC
-  '0xe31dd093a2a0adc80053bf2b929e56abfe1b1632', // QUSD
-  '0xdeb87c37dcf7f5197026f574cd40b3fc8aa126d1', // dai
+  '0x6b175474e89094c44da98b954eedeac495271d0f',
+  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  '0xdac17f958d2ee523a2206206994597c13d831ec7',
+  '0x0000000000085d4780b73119b644ae5ecd22b376',
+  '0x956f47f50a910163d8bf957cf5846d573e7f87ca',
+  '0x4dd28568d05f09b02220b09c2cb307bfd837cb95',
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
