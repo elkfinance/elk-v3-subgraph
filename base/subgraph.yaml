@@ -9,11 +9,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: replace_chainname
+    network: base
     source:
       address: "0xc05a5aa56df0dc97d6b9849a06627a079790014f"
       abi: Factory
-      startBlock: 11486703
+      startBlock: 9384548
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: replace_chainname
+    network: base
     source:
       abi: Pool
     mapping:
