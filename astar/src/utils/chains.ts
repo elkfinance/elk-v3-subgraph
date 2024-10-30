@@ -4,7 +4,7 @@ import { OPTIMISM_POOL_MAPPINGS } from '../backfill/poolMappings'
 import { StaticTokenDefinition } from './staticTokenDefinition'
 
 export enum ChainId {
-  MAINNET = 106,
+  MAINNET = 592,
 }
 
 // subgraph does not support string enums, hence these constants
@@ -61,23 +61,20 @@ export function getSubgraphConfig(): SubgraphConfig {
   if (selectedNetwork == MAINNET_NETWORK_NAME) {
     return {
       factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f',
-      stablecoinWrappedNativePoolAddress: '0x5ae6832ded321229cfe31afbde5811e793613ca1', // WETH-USDC 0.05% pool
+      stablecoinWrappedNativePoolAddress: '0xe62a9fd17e20b0cf7bda984365f23856f3e2fde2', // WETH-USDC 0.3% pool
       stablecoinIsToken0: true,
-      wrappedNativeAddress: '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126', // WETH
+      wrappedNativeAddress: '0xaeaaf0e2c81af264101b9129c00f4440ccf0f720', // WETH
       minimumNativeLocked: BigDecimal.fromString('0'),
       stablecoinAddresses: [
-        '0xc111c29a988ae0c0087d97b33c6e6766808a3bd3', // BUSD
+        '0x6a2d262d56735dba19dd70682b39f6be9a931d98', // ceUSDC
+        '0x3795c36e7d12a8c252a20c5a7b455f7c57b60283', // ceUSDT
+        '0x6de33698e9e9b787e09d3bd7771ef63557e148bb', // ceDAI
+        '0x4bf769b05e832fcdc9053fffbc78ca889acb5e1e', // ceBUSD
       ],
       whitelistTokens: [
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-        '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-        '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-        '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
-        '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-        '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126', // WVLX
-        '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-        '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-        '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
+        '0x7f27352d5f83db87a5a3e00f4b07cc2138d8ee52', // ceBNB
+        '0x81ecac0d6be0550a00ff064a4f9dd2400585fe9c', // ceWETH
       ],
       tokenOverrides: [
         // {

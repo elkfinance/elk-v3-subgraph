@@ -4,27 +4,19 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-export const WETH_ADDRESS = '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126'
-export const USDC_WETH_03_POOL = '0x5ae6832ded321229cfe31afbde5811e793613ca1'
-export const STABLECOIN_IS_TOKEN0 = true
+export const WETH_ADDRESS = 'replace_wethaddress'
+export const USDC_WETH_03_POOL = 'replace_stableNativePool'
+export const STABLECOIN_IS_TOKEN0 = replace_boolean
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-  '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-  '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-  '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
-  '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-  '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126', // WVLX
-  '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-  '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-  '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
+  'replace_whitelist', //whitelisted tokens
 ]
 
 export const STABLE_COINS: string[] = [
-  '0xc111c29a988ae0c0087d97b33c6e6766808a3bd3', // BUSD
+  'replace_stables', //stables
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')

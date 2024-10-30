@@ -4,27 +4,22 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-export const WETH_ADDRESS = '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126'
-export const USDC_WETH_03_POOL = '0x5ae6832ded321229cfe31afbde5811e793613ca1'
+export const WETH_ADDRESS = '0xaeaaf0e2c81af264101b9129c00f4440ccf0f720'
+export const USDC_WETH_03_POOL = '0xe62a9fd17e20b0cf7bda984365f23856f3e2fde2'
 export const STABLECOIN_IS_TOKEN0 = true
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-  '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-  '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-  '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
-  '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-  '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126', // WVLX
-  '0x85219708c49aa701871ad330a94ea0f41dff24ca', // WETH
-  '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', // WBNB
-  '0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5', // WMATIC
+  '0x6a2d262d56735dba19dd70682b39f6be9a931d98', // ceUSDC
+  '0x3795c36e7d12a8c252a20c5a7b455f7c57b60283', // ceUSDT
+  '0x6de33698e9e9b787e09d3bd7771ef63557e148bb', // ceDAI
+  '0x4bf769b05e832fcdc9053fffbc78ca889acb5e1e', // ceBUSD
 ]
 
 export const STABLE_COINS: string[] = [
-  '0xc111c29a988ae0c0087d97b33c6e6766808a3bd3', // BUSD
+
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
