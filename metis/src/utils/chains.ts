@@ -61,7 +61,7 @@ export function getSubgraphConfig(): SubgraphConfig {
   if (selectedNetwork == MAINNET_NETWORK_NAME) {
     return {
       factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f',
-      stablecoinWrappedNativePoolAddress: '0x359fb0A25CbB08402D1f41Df18F7679542cddE54', // WMETIS-m.USDC 0.3% pool
+      stablecoinWrappedNativePoolAddress: '0x359fb0a25cbb08402d1f41df18f7679542cdde54', // WMETIS-m.USDC 0.3% pool
       stablecoinIsToken0: false,
       wrappedNativeAddress: '0x75cb093e4d61d2a2e65d8e0bbb01de8d89b53481', // WMETIS
       minimumNativeLocked: BigDecimal.fromString('0'),
