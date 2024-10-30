@@ -4,7 +4,7 @@ import { OPTIMISM_POOL_MAPPINGS } from '../backfill/poolMappings'
 import { StaticTokenDefinition } from './staticTokenDefinition'
 
 export enum ChainId {
-  MAINNET = 199,
+  MAINNET = 245022934,
 }
 
 // subgraph does not support string enums, hence these constants
@@ -61,34 +61,21 @@ export function getSubgraphConfig(): SubgraphConfig {
   if (selectedNetwork == MAINNET_NETWORK_NAME) {
     return {
       factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f',
-      stablecoinWrappedNativePoolAddress: '0x3099067b46d3cdc978fa9c88c79c5df2c6d8e430', // WBTTC-USDT_t 0.3% pool
+      stablecoinWrappedNativePoolAddress: '0xe7e5e60891b7d65cd2640f42cb5c94d0dec77769', // WNEON-USDC 0.3% pool
       stablecoinIsToken0: false,
-      wrappedNativeAddress: '0x8d193c6efa90bcff940a98785d1ce9d093d3dc8a', // WBTTC
+      wrappedNativeAddress: '0x202c35e517fa803b537565c40f0a6965d7204609', // WETH
       minimumNativeLocked: BigDecimal.fromString('0'),
       stablecoinAddresses: [
-        '0xe7dc549ae8db61bde71f22097becc8db542ca100', // DAI_e
-        '0xde47772ac041a4ccf3c865632131d1093e51c02d', // BUSD_b
-        '0xca424b845497f7204d9301bd13ff87c0e2e86fcf', // USDC_b
-        '0x935faa2fcec6ab81265b301a30467bbc804b43d3', // USDC_t
-        '0xae17940943ba9440540940db0f1877f101d39e8b', // USDC_e
-        '0x17f235fd5974318e4e2a5e37919a209f7c37a6d1', // USDD_t
-        '0x74e7cef747db9c8752874321ba8b26119ef70c9e', // USDD_b
-        '0xb602f26bf29b83e4e1595244000e0111a9d39f62', // USDD_e
-        '0x9b5f27f6ea9bbd753ce3793a07cba3c74644330d', // USDT_b
-        '0xdb28719f7f938507dbfe4f0eae55668903d34a15', // USDT_t
+        '0xea6b04272f9f62f997f666f07d3a974134f7ffb9', // USDC
+        '0x5f0155d08ef4aae2b500aefb64a3419da8bb611a', // USDT
       ],
       whitelistTokens: [
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-        '0xcbb9edf6775e39748ea6483a7fa6a385cd7e9a4e', // BTT_b
-        '0x65676055e58b02e61272cedec6e5c6d56badfb86', // BTT_e
-        '0xedf53026aea60f8f75fca25f8830b7e2d6200662', // TRX
-        '0x185a4091027e2db459a2433f85f894dc3013aeb5', // BNB
-        '0x1249c65afb11d179ffb3ce7d4eedd1d9b98ad006', // wETH
-        '0xa20dfb01dca223c0e52b0d4991d4afa7e08e3a50', // ETH_b
-        '0x17501034df227d8565a8c11f41df2418f5d403b6', // JST_t
-        '0x76accfb75b8bb7c6c295f04d19c1d184d274c853', // SUN_t
-        '0x1a7019909b10cdd2d8b0034293ad729f1c1f604e', // BTC_b
-        '0x9888221fe6b5a2ad4ce7266c7826d2ad74d40ccf', // WBTC_e
+        '0x202c35e517fa803b537565c40f0a6965d7204609', // WNEON
+        '0x5f38248f339bf4e84a2caf4e4c0552862dc9f82a', // WSOL
+        '0x54ecec9d995a6cbff3838f6a8f38099e518805d7', // WBTC
+        '0xcffd84d468220c11be64dc9df64eafe02af60e8a', // WETH
+        '0x432b39e097d9faa2cbaa86f8d36bcf3b8019fe9f', // NEOPEPE
       ],
       tokenOverrides: [
         // {
