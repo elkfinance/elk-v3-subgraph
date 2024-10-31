@@ -12,6 +12,9 @@ export const STABLECOIN_IS_TOKEN0 = true
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
+  '0x332730a4f6e03d9c55829435f10360e13cfa41ff', // BUSD
+  '0x382bb369d343125bfb2117af9c149795c6c65c50', // USDT
+  '0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85', // USDC
   '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
   '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // oELK
   '0xdcac52e001f5bd413aa6ea83956438f29098166b', // USDK

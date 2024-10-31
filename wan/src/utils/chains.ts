@@ -70,6 +70,8 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0x11e77e27af5539872efed10abaa0b408cfd9fbbd', // wanUSDT
       ],
       whitelistTokens: [
+        '0x52a9cea01c4cbdd669883e41758b8eb8e8e2b34b', // wanUSDC
+        '0x11e77e27af5539872efed10abaa0b408cfd9fbbd', // wanUSDT
         '0x50c439b6d602297252505a6799d84ea5928bcfb6', // wanBTC
         '0xe3ae74d1518a76715ab4c7bedf1af73893cd435a', // wanETH
         '0xb333721251961337f67bbbcaed514f9f284ce8e8', // wanAVAX

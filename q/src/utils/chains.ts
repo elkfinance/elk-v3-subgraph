@@ -70,6 +70,9 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xdeb87c37dcf7f5197026f574cd40b3fc8aa126d1', // dai
       ],
       whitelistTokens: [
+        '0x79cb92a2806bf4f82b614a84b6805963b8b1d8bb', // USDC
+        '0xe31dd093a2a0adc80053bf2b929e56abfe1b1632', // QUSD
+        '0xdeb87c37dcf7f5197026f574cd40b3fc8aa126d1', // dai
         '0xd07178e3ecbc78de110df84fe1a979d5f349784a', // WQGOV
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // elk
         '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // old_elk

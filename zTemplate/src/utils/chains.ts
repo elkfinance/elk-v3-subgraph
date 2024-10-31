@@ -69,7 +69,7 @@ export function getSubgraphConfig(): SubgraphConfig {
         'replace_tokens', // stableaddresses
       ],
       whitelistTokens: [
-        'replace_tokens', //tokens
+        'replace_tokens', //tokens incl stables
       ],
       tokenOverrides: [
         // {

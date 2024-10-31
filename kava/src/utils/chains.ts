@@ -70,6 +70,8 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xeb466342c4d449bc9f53a865d5cb90586f405215', // USDC Axelar
       ],
       whitelistTokens: [
+        '0x919c1c267bc06a7039e03fcc2ef738525769109c', // USDT
+        '0xeb466342c4d449bc9f53a865d5cb90586f405215', // USDC Axelar
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // elk
         '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // old_elk
         '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk_legacy

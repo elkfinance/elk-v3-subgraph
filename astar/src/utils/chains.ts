@@ -75,6 +75,10 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
         '0x7f27352d5f83db87a5a3e00f4b07cc2138d8ee52', // ceBNB
         '0x81ecac0d6be0550a00ff064a4f9dd2400585fe9c', // ceWETH
+        '0x6a2d262d56735dba19dd70682b39f6be9a931d98', // ceUSDC
+        '0x3795c36e7d12a8c252a20c5a7b455f7c57b60283', // ceUSDT
+        '0x6de33698e9e9b787e09d3bd7771ef63557e148bb', // ceDAI
+        '0x4bf769b05e832fcdc9053fffbc78ca889acb5e1e', // ceBUSD
       ],
       tokenOverrides: [
         // {

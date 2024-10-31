@@ -70,6 +70,8 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0x5f0155d08ef4aae2b500aefb64a3419da8bb611a', // USDT
       ],
       whitelistTokens: [
+        '0xea6b04272f9f62f997f666f07d3a974134f7ffb9', // USDC
+        '0x5f0155d08ef4aae2b500aefb64a3419da8bb611a', // USDT
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
         '0x202c35e517fa803b537565c40f0a6965d7204609', // WNEON
         '0x5f38248f339bf4e84a2caf4e4c0552862dc9f82a', // WSOL

@@ -14,6 +14,9 @@ export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
   '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
   '0x05f1938646a897008e813fb03ce7c575eae45738', // PR
+  '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDbC
+  '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913', // USDC
+  '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
 ]
 
 export const STABLE_COINS: string[] = [

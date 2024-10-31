@@ -74,6 +74,12 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xc7198437980c041c805a1edcba50c1ce5db95118', // USDT.e
       ],
       whitelistTokens: [
+        '0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7', // USDT
+        '0x9c9e5fd8bbc25984b178fdce6117defa39d2db39', // BUSD
+        '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664', // USDC.e
+        '0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e', // USDC
+        '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // DAI.e
+        '0xc7198437980c041c805a1edcba50c1ce5db95118', // USDT.e
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
         '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // oELK
         '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // lELK

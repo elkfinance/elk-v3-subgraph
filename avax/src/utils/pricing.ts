@@ -438,6 +438,12 @@ export const WHITELIST_TOKENS: string[] = [
   '0x02bfd11499847003de5f0f5aa081c43854d48815', // RADIO
   '0xaec8318a9a59baeb39861d10ff6c7f7bf1f96c57', // agEUR
   '0x05f1938646a897008e813fb03ce7c575eae45738', // PR
+  '0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7', // USDT
+  '0x9c9e5fd8bbc25984b178fdce6117defa39d2db39', // BUSD
+  '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664', // USDC.e
+  '0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e', // USDC
+  '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // DAI.e
+  '0xc7198437980c041c805a1edcba50c1ce5db95118', // USDT.e
 ]
 
 export const STABLE_COINS: string[] = [

@@ -12,7 +12,7 @@ export const STABLECOIN_IS_TOKEN0 = replace_boolean
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  'replace_whitelist', //whitelisted tokens
+  'replace_whitelist', //whitelisted tokens incl stables
 ]
 
 export const STABLE_COINS: string[] = [

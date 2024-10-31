@@ -78,6 +78,16 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xdb28719f7f938507dbfe4f0eae55668903d34a15', // USDT_t
       ],
       whitelistTokens: [
+        '0xe7dc549ae8db61bde71f22097becc8db542ca100', // DAI_e
+        '0xde47772ac041a4ccf3c865632131d1093e51c02d', // BUSD_b
+        '0xca424b845497f7204d9301bd13ff87c0e2e86fcf', // USDC_b
+        '0x935faa2fcec6ab81265b301a30467bbc804b43d3', // USDC_t
+        '0xae17940943ba9440540940db0f1877f101d39e8b', // USDC_e
+        '0x17f235fd5974318e4e2a5e37919a209f7c37a6d1', // USDD_t
+        '0x74e7cef747db9c8752874321ba8b26119ef70c9e', // USDD_b
+        '0xb602f26bf29b83e4e1595244000e0111a9d39f62', // USDD_e
+        '0x9b5f27f6ea9bbd753ce3793a07cba3c74644330d', // USDT_b
+        '0xdb28719f7f938507dbfe4f0eae55668903d34a15', // USDT_t
         '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
         '0xcbb9edf6775e39748ea6483a7fa6a385cd7e9a4e', // BTT_b
         '0x65676055e58b02e61272cedec6e5c6d56badfb86', // BTT_e
