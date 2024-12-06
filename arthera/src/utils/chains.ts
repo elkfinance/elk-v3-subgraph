@@ -61,15 +61,20 @@ export function getSubgraphConfig(): SubgraphConfig {
   if (selectedNetwork == MAINNET_NETWORK_NAME) {
     return {
       factoryAddress: '0xc05a5aa56df0dc97d6b9849a06627a079790014f',
-      stablecoinWrappedNativePoolAddress: '0x0000000000000000000000000000000000000000', // no pool
-      stablecoinIsToken0: replace_boolean,
-      wrappedNativeAddress: 'noweth', // WETH
+      stablecoinWrappedNativePoolAddress: '0x3CfB1956052A81e88Eea1d6D5ebd26E4B53E7239', // AA-USDT
+      stablecoinIsToken0: false,
+      wrappedNativeAddress: '0x69d349e2009af35206efc3937bad6817424729f7', // WAA
       minimumNativeLocked: BigDecimal.fromString('0'),
       stablecoinAddresses: [
-        'replace_tokens', // stableaddresses
+        '0x6C45E28A76977a96e263f84F95912B47F927B687', // USDT
+        '0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B' // USDC.e
       ],
       whitelistTokens: [
-        'replace_tokens', //tokens
+        '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
+        '0x69d349e2009af35206efc3937bad6817424729f7', // WAA
+        '0x6c45e28a76977a96e263f84f95912b47f927b687', // USDT
+        '0x8c4acd74ff4385f3b7911432fa6787aa14406f8b', // USDC.e
+        '0x05F1938646a897008e813fb03CE7C575eAE45738', // PR
       ],
       tokenOverrides: [
         // {
