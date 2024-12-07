@@ -5,7 +5,7 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
 export const WETH_ADDRESS = '0x69d349e2009af35206efc3937bad6817424729f7'
-export const USDC_WETH_03_POOL = '0x3CfB1956052A81e88Eea1d6D5ebd26E4B53E7239'
+export const USDC_WETH_03_POOL = '0x3cfb1956052a81e88eea1d6d5ebd26e4b53e7239'
 export const STABLECOIN_IS_TOKEN0 = false
 
 // token where amounts should contribute to tracked volume and liquidity
@@ -16,12 +16,12 @@ export const WHITELIST_TOKENS: string[] = [
   '0x69d349e2009af35206efc3937bad6817424729f7', // WAA
   '0x6c45e28a76977a96e263f84f95912b47f927b687', // USDT
   '0x8c4acd74ff4385f3b7911432fa6787aa14406f8b', // USDC.e
-  '0x05F1938646a897008e813fb03CE7C575eAE45738', // PR
+  '0x05f1938646a897008e813fb03ce7c575eae45738', // PR
 ]
 
 export const STABLE_COINS: string[] = [
-  '0x6C45E28A76977a96e263f84F95912B47F927B687', // USDT
-  '0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B' // USDC.e
+  '0x6c45e28a76977a96e263f84f95912b47f927b687', // USDT
+  '0x8c4acd74ff4385f3b7911432fa6787aa14406f8b' // USDC.e
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
