@@ -5,7 +5,7 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
 export const WETH_ADDRESS = '0x69d349e2009af35206efc3937bad6817424729f7'
-export const USDC_WETH_03_POOL = '0x47fec4ee710a87d05e04719c9a589757601d19fa'
+export const USDC_WETH_03_POOL = '0x869d793ac023fc04c1a8e0d96e994b6df0220f79'
 export const STABLECOIN_IS_TOKEN0 = false
 
 // token where amounts should contribute to tracked volume and liquidity
