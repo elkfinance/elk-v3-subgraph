@@ -5,15 +5,14 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
 export const WETH_ADDRESS = '0x69d349e2009af35206efc3937bad6817424729f7'
-export const USDC_WETH_03_POOL = '0x3cfb1956052a81e88eea1d6d5ebd26e4b53e7239'
+export const USDC_WETH_03_POOL = '0x47fec4ee710a87d05e04719c9a589757601d19fa'
 export const STABLECOIN_IS_TOKEN0 = false
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
-  WETH_ADDRESS, // WETH
+  WETH_ADDRESS, // WAA
   '0xeeeeeb57642040be42185f49c52f7e9b38f8eeee', // ELK
-  '0x69d349e2009af35206efc3937bad6817424729f7', // WAA
   '0x6c45e28a76977a96e263f84f95912b47f927b687', // USDT
   '0x8c4acd74ff4385f3b7911432fa6787aa14406f8b', // USDC.e
   '0x05f1938646a897008e813fb03ce7c575eae45738', // PR
